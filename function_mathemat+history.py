@@ -31,15 +31,17 @@ def operation_mat():
                 print("Error. Invalid operation")
                 continue
             # -------------------2. calculation  of three or more operations
-            #--------------------3. Save result to history------------------
 
+            #--------------------3. Save result to history------------------
             with open('history.txt', 'a') as history:
                 history.write(f'{num1} {operation} {num2} = {result}\n')
 
+            # display integer or decimal
             if result.is_integer():  
                 print(f"Result: {int(result)}")
             else:  
                 print(f"Result: {result}")
+                
     except KeyboardInterrupt:
         print("Return: ")
             # -------------------5. Graphical interface---------------------
