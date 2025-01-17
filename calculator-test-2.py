@@ -62,7 +62,7 @@ def classic_calculator():
             elif next_calculation == "yes":
                 break  
             else:
-                print("Invalid input. Please enter 'yes' or 'no'.")
+                print("Invalid input. Please enter 'yes' or 'no'.")git stz
             
 
 # Custom calculator function
