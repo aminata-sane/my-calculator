@@ -12,7 +12,7 @@ def multiply(x, y):
 
 # This function divides two numbers
 def divide(x, y):
-    if y == 0:
+    if  y == 0:
         return "Error: Division by zero."
     return x / y
 
@@ -58,6 +58,8 @@ def classic_calculator():
             next_calculation = input("\nDo you want another calculation? (yes/no): ").strip().lower()
             if next_calculation == "no":
                 break
+            else:
+                print("Invalid Input")
         else:
             print("Invalid Input")
 
@@ -112,20 +114,33 @@ def custom_calculator():
                     del operators[i]
                     break
 
+            
         return numbers[0]
+    
+        
 
     print("\nCustom Calculator")
     print("Enter expressions like: a.1 + b - c.5 * d / e")
-    print("Type 'exit' to return to the main menu.")
 
     while True:
+# Ask the user to enter an expression and calculate the result
         expression = input("\nEnter your expression: ").strip()
-        if expression.lower() == "exit":
-            print("Returning to the main menu...")
-            break
         result = calculate(expression)
         history.append(f"{expression} = {result}")
         print(f"Result: {result}")
+    
+# Loop to validate the response to the question
+        while True:
+            next_calculation = input("\nDo you want another calculation? (yes/no): ").strip().lower()
+            if next_calculation == "no":
+                return False  
+            elif next_calculation == "yes":
+                break  
+            else:
+                print("Invalid input. Please enter 'yes' or 'no'.")
+
+
+        
 
 # History display function
 def display_history():
