@@ -55,13 +55,15 @@ def classic_calculator():
                 print(num1, "/", num2, "=", result)
                 history.append(f"{num1} / {num2} = {result}")
             
+        while True:
             next_calculation = input("\nDo you want another calculation? (yes/no): ").strip().lower()
             if next_calculation == "no":
-                break
+                return False  
+            elif next_calculation == "yes":
+                break  
             else:
-                print("Invalid Input")
-        else:
-            print("Invalid Input")
+                print("Invalid input. Please enter 'yes' or 'no'.")
+            
 
 # Custom calculator function
 def custom_calculator():
