@@ -148,7 +148,7 @@ def write_history(num1, num2, result, choice):
     with open("history.txt", "a") as my_file:
         my_file.write(str(num1) + " " + choice + " " + str(num2) + " = " + str(result) + "\n")
 
-def read_fonction() :
+def read_history() :
     try:    
         with open("history.txt", "r") as my_file :
             print("\nHistory of calculations:")
@@ -172,7 +172,7 @@ def main():
         elif choice == "2":
             custom_calculator()
         elif choice == "3":
-            read_fonction()
+            read_history()
         elif choice == "4":
             print("Goodbye!")
             break
